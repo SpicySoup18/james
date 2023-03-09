@@ -1,0 +1,79 @@
+class Computer:
+    def __init__(self, brand, year, processor, RAM, storage):
+        self.brand = brand
+        self.year = year
+        self.processor = processor
+        self.RAM = RAM
+        self.storage = storage
+
+    def info(self):
+        return('{}\t{}\t{}\t{}\t{}'.format(self.brand, self.year, self.processor, self.RAM, self.storage))
+
+
+class MacbookPro(Computer):
+    def __init__(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+class MacbookAir(Computer):
+    def init(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+class iMac(Computer):
+    def init(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+class iMacAir(Computer):
+    def init(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+class iMacPro(Computer):
+    def init(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+class MacMini(Computer):
+    def init(self, brand, year, processor, RAM, storage):
+        Computer.__init__(self, brand, year, processor, RAM, storage)
+
+
+
+def main():
+    MBPro1 = MacbookPro("Apple", "2022", "M1", "#", '#')
+    MBPro2 = MacbookPro("Apple", "2021", "M1", "#", '#')
+    MBAir1 = MacbookAir("Apple", "2017", "Intel i5", "#", '#')
+    MBAir2 = MacbookAir("Apple", "2022", "M1", "#", '#')
+    iM1 = iMac("Apple", "2015", "Intel i7", "#", '#')
+    iM2 = iMac("Apple", "2020", "M1", "#", '#')
+    iMA1 = iMacAir("Apple", "2019", "Intel i5", "#", '#')
+    iMA2 = iMacAir("Apple", "2020", "M1", "#", '#')
+    iMP1 = iMacPro("Apple", "2020", "M1", "#", '#')
+    iMP2 = iMacPro("Apple", "2018", "Intel i9", "#", '#')
+    iMM1 = MacMini("Apple", "2017", "Intel i7", "#", '#')
+    iMM2 = MacMini("Apple", "2021", "M1 Snake", "#", '#')
+
+    computers = [MBPro1, MBPro2, MBAir1, MBAir2, iM1, iM2, iMA1, iMA2, iMP1, iMP2, iMM1, iMM2]
+
+    print("{}\t{}\t{}\t{}\t{}\t{}".format("Computer Inventory Number", "Brand", "Year", "Processor", "RAM", "Storage"))
+    print("=====================================================================")
+
+    number = 0
+    for car in cars:
+        number = number + 1
+        specs = car.info()
+        print("{:>4}\t{:<8}".format(number, specs))
+
+    choice = input("Please select a car by entering a number 1-{}: ".format(len(cars)))
+    choice = int(choice)
+    user_car = cars[choice - 1]
+    print("The price for this car is: ${:,.2f}".format(user_car.price))
+
+   
+
+    print("Thank you, come again!")
+
+if __name__ == "__main__":
+    main()
